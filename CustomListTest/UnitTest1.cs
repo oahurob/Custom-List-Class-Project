@@ -10,6 +10,15 @@ namespace CustomListTest
         [TestMethod]
         public void TestMethod1()
         {
+            //Arrange
+            List<int> list = new List<int>();
+            int testNum = 4;
+
+            //Act
+            list.ListAdd(testNum);
+
+            //Assert
+            Assert.AreEqual(testNum, list[0]);
 
         }
     }
