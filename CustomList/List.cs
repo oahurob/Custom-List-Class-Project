@@ -15,10 +15,12 @@ namespace CustomList
             
         }
 
-        public void ListAdd()
+        public void ListAdd<T>()
         {
 
         }
+
+        //Make a method that temperaroly holds the array that needs copied
 
     }
 }
