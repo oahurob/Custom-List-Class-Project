@@ -8,12 +8,34 @@ namespace CustomList
 {
     public class List<T>
     {
-        T[] list;
-        public int count;
+        public T[] list = new T[4];
+        public int index;
+        public int capacity; 
+        public int Count { get { return count; } }
+        private int count;
 
-        public void EstablishList<T>(T list) where T: List, new()
+        public T this[int index]
         {
-               
+            get
+            {
+                return list[index];
+            }
+            set
+            {
+                list[index] = value;
+            }
+        }
+
+        public List()
+        {
+            index = 0;
+            count = 0;
+            capacity = 4;
+        }
+
+        public void EstablishList<T>()
+        {
+          
         }
 
         public void Add<T>(T list)
