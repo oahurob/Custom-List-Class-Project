@@ -49,10 +49,12 @@ namespace CustomList
 
         public void Add<T>(T item)
         {
-            count++;
             if(count < capacity)
             {
-
+                for(int i = 0; i < count; i++)
+                {
+                    list[i] = input;
+                }
             }
             list[count - 1] = value;
             
