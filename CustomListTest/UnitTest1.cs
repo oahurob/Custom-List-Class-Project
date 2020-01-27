@@ -7,6 +7,9 @@ namespace CustomListTest
     [TestClass]
     public class UnitTest1
     {
+
+        // ADDING TEST
+
         //Test for adding value to index 0
         [TestMethod]
         public void Test_Add_To_Index0()
@@ -16,7 +19,7 @@ namespace CustomListTest
             int testNum = 4;
 
             //Act
-            list.ListAdd(testNum);
+            list.Add(testNum);
 
             //Assert
             Assert.AreEqual(testNum, list[0]);
@@ -32,7 +35,7 @@ namespace CustomListTest
             int testNum = 4;
 
             //Act
-            list.ListAdd(testNum);
+            list.Add(testNum);
 
             //Assert
             Assert.AreEqual(testNum, list[3]);
@@ -48,7 +51,7 @@ namespace CustomListTest
             int testNum = 4;
 
             //Act
-            list.ListAdd(testNum);
+            list.Add(testNum);
 
             //Assert
             Assert.AreEqual(testNum, list[0]);
@@ -64,12 +67,14 @@ namespace CustomListTest
             int testNum = 4;
 
             //Act
-            list.ListAdd(testNum);
+            list.Add(testNum);
 
             //Assert
             Assert.AreEqual(testNum, list[0]);
 
         }
+
+        // REMOVING TEST
 
         //Test for Removing value at index 0
         [TestMethod]
@@ -80,7 +85,7 @@ namespace CustomListTest
             int testNum = 0;
 
             //Act
-            list.ListRemove(testNum);
+            list.Remove(testNum);
 
             //Assert
             Assert.AreEqual(testNum, list[0]);
@@ -96,7 +101,7 @@ namespace CustomListTest
             int testNum = 0;
 
             //Act
-            list.ListRemove(testNum);
+            list.Remove(testNum);
 
             //Assert
             Assert.AreEqual(testNum, list[3]);
@@ -112,7 +117,7 @@ namespace CustomListTest
             int testNum = 0;
 
             //Act
-            list.ListRemove(testNum);
+            list.Remove(testNum);
 
             //Assert
             Assert.AreEqual(testNum, list[0]);
@@ -128,12 +133,14 @@ namespace CustomListTest
             int testNum = 0;
 
             //Act
-            list.ListRemove(testNum);
+            list.Remove(testNum);
 
             //Assert
             Assert.AreEqual(testNum, list[3]);
 
         }
+
+        //  COPYING TEST
 
         //Test for copying Array into temp Array
         [TestMethod]
@@ -141,13 +148,13 @@ namespace CustomListTest
         {
             //Arrange
             List<int> list = new List<int>();
-            list.ListCopy;
+            list.Copy;
 
             //Act
             list.list;
 
             //Assert
-            Assert.AreEqual(list.ListCopy, list.list);
+            Assert.AreEqual(list.Copy, list.list);
 
         }
 
@@ -157,13 +164,13 @@ namespace CustomListTest
         {
             //Arrange
             List<int> list = new List<int>();
-            list.ListCopy;
+            list.Copy;
 
             //Act
             list.list;
 
             //Assert
-            Assert.AreEqual(list.ListCopy, list.list);
+            Assert.AreEqual(list.Copy, list.list);
 
         }
     }

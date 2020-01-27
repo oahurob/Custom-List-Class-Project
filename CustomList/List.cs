@@ -15,14 +15,24 @@ namespace CustomList
             
         }
 
-        public void ListAdd<T>()
+        public void Add<T>()
         {
             
         }
 
-        public void ListRemove<T>()
+        public void Remove<T>()
         {
 
+        }
+
+        public void Copy<T>()
+        {
+
+        }
+
+        public void Extend<T>()
+        {
+            
         }
 
         //Make a method that temp holds the array that needs copied
