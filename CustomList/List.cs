@@ -47,25 +47,59 @@ namespace CustomList
           
         }
 
-        public void Add<T>(T value)
+        public void Add<T>(T item)
         {
             count++;
             if(count < capacity)
             {
-                list = Copy();
+
             }
             list[count - 1] = value;
             
         }
 
-        public void Remove<T>(T list)
+        public bool Remove<T>(T list)
         {
+            bool Removed = false;
 
+            for (int i = 0; i < count; i++)
+            {
+                if (list[i].Equals(list))
+                {
+                    if (count == 1)
+                    {
+                        list = new T[4];
+                        Removed = true;
+                        break;
+                    }
+                    //array = CopyExcept(i);
+                    Removed = true;
+                    break;
+                }
+            }
+            if (Removed)
+            {
+                count--;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
-        public void CopyList<T>(T list)
+        public T[] CopyList<T>()
         {
-            
+            capacity *= 2;
+
+            T[] temporary = new T[capacity];
+
+            for (int i = 0; i < count - 1; i++)
+            {
+                //temporary[i] = list[i];
+            }
+
+            return temporary;
         }
 
         public void Extend<T>(T list)
