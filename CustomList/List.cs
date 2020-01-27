@@ -43,7 +43,7 @@ namespace CustomList
             capacity = 4;
         }
 
-        public void EstablishList<T>()
+        public void EstablishList()
         {
           
         }
@@ -51,18 +51,17 @@ namespace CustomList
         public void Add(T input)
         {
             list[index] = input;
-            
+            index++;
         }
 
-        public bool Remove<T>(T item)
+        public bool Remove(T itnput)
         {
             bool Removed = false;
 
             for (int i = 0; i < count; i++)
             {
-                if (list[i].Equals(item))
+                if (list[i].Equals(input))
                 {
-                    list[i] = 0;
                     Removed = true;
                 }
             }
@@ -77,7 +76,7 @@ namespace CustomList
             }
         }
 
-        public T[] CopyList<T>()
+        public T[] CopyList()
         {
             capacity *= 2;
 
@@ -91,7 +90,7 @@ namespace CustomList
             return temporary;
         }
 
-        public void Extend<T>(T list)
+        public void Extend(T list)
         {
             
         }
