@@ -57,15 +57,15 @@ namespace CustomList
             
         }
 
-        public bool Remove<T>(T list)
+        public bool Remove<T>(T item)
         {
             bool Removed = false;
 
             for (int i = 0; i < count; i++)
             {
-                if ()
+                if (list[i].Equals(item))
                 {
-                    
+                    list[i] = 0;
                 }
             }
             if (Removed)
