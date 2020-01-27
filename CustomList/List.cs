@@ -70,11 +70,10 @@ namespace CustomList
                 {
                     if (count == 1)
                     {
-                        list = new T[4];
+                        list = new T[4]; 
                         Removed = true;
                         break;
                     }
-                    //array = CopyExcept(i);
                     Removed = true;
                     break;
                 }
