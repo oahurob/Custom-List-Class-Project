@@ -8,29 +8,30 @@ namespace CustomList
 {
     public class List<T>
     {
-        public T[] list;
+        T[] list;
+        public int count;
 
-        public void EstablishList<T>(int number)
+        public void EstablishList<T>(T list) where T: List, new()
+        {
+               
+        }
+
+        public void Add<T>(T list)
         {
             
         }
 
-        public void Add<T>()
-        {
-            
-        }
-
-        public void Remove<T>()
+        public void Remove<T>(T list)
         {
 
         }
 
-        public void Copy<T>()
+        public void Copy<T>(T list)
         {
 
         }
 
-        public void Extend<T>()
+        public void Extend<T>(T list)
         {
             
         }
