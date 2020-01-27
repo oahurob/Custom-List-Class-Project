@@ -123,6 +123,15 @@ namespace CustomListTest
         [TestMethod]
         public void Test_RemoveValue_atIndex3_OfFilledArray()
         {
+            //Arrange
+            List<int> list = new List<int>();
+            int testNum = 0;
+
+            //Act
+            list.ListRemove(testNum);
+
+            //Assert
+            Assert.AreEqual(testNum, list[3]);
 
         }
 
@@ -130,6 +139,15 @@ namespace CustomListTest
         [TestMethod]
         public void Test_Copying_Array()
         {
+            //Arrange
+            List<int> list = new List<int>();
+            list.ListCopy;
+
+            //Act
+            list.list;
+
+            //Assert
+            Assert.AreEqual(list.ListCopy, list.list);
 
         }
 
@@ -137,7 +155,16 @@ namespace CustomListTest
         [TestMethod]
         public void Test_OriginalArray_Equals_Index0Through3_OfNewArray()
         {
-            
+            //Arrange
+            List<int> list = new List<int>();
+            list.ListCopy;
+
+            //Act
+            list.list;
+
+            //Assert
+            Assert.AreEqual(list.ListCopy, list.list);
+
         }
     }
 }

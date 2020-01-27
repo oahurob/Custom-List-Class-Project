@@ -8,7 +8,7 @@ namespace CustomList
 {
     public class List<T>
     {
-        T[] list;
+        public T[] list;
 
         public void EstablishList<T>(int number)
         {
