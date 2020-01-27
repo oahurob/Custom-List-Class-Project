@@ -48,9 +48,9 @@ namespace CustomList
           
         }
 
-        public void Add<T>(T item)
+        public void Add(T input)
         {
-            list[index] = item;
+            list[index] = input;
             
         }
 
