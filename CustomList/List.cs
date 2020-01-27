@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CustomList
 {
-    public class List<T>
+    public class List<T> : IEnumerable
     {
         public T[] list = new T[4];
         public int index;
@@ -49,11 +50,7 @@ namespace CustomList
 
         public void Add<T>(T item)
         {
-            if(count < capacity)
-            {
-                    list[index] = input;
-            }
-            index++;
+            list[index] = item;
             
         }
 
@@ -67,7 +64,6 @@ namespace CustomList
                 {
                     list[i] = 0;
                     Removed = true;
-                    count -= 1;
                 }
             }
             if (Removed)
@@ -100,7 +96,13 @@ namespace CustomList
             
         }
 
+        public IEnumerator GetEnumerator()
+        {
+            throw new NotImplementedException();//for loop to print each index
+        }
+
         //Make a method that temp holds the array that needs copied
+
 
     }
 }
