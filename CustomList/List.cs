@@ -51,12 +51,9 @@ namespace CustomList
         {
             if(count < capacity)
             {
-                for(int i = 0; i < count; i++)
-                {
-                    list[i] = input;
-                }
+                    list[index] = input;
             }
-            list[count - 1] = value;
+            index++;
             
         }
 
@@ -66,16 +63,9 @@ namespace CustomList
 
             for (int i = 0; i < count; i++)
             {
-                if (list[i].Equals(list))
+                if ()
                 {
-                    if (count == 1)
-                    {
-                        list = new T[4]; 
-                        Removed = true;
-                        break;
-                    }
-                    Removed = true;
-                    break;
+                    
                 }
             }
             if (Removed)
