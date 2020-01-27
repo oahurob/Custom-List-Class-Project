@@ -140,6 +140,39 @@ namespace CustomListTest
 
         }
 
+        // TO STRING TEST  
+
+        //Test for checking if index 0 was successfully changed to a string
+        [TestMethod]
+        public void Test_index0_ToString()
+        {
+            //Arrange
+            List<int> list = new List<int>();
+            string testString = "1";
+
+            //Act
+            list.ToString();
+
+            //Assert
+            Assert.AreEqual(testString, list[0]);
+        }
+
+        //Test for checking if index 3 was successfully changed to a string
+        [TestMethod]
+        public void Test_index3_ToString()
+        {
+            //Arrange
+            List<int> list = new List<int>();
+            string testString = "1";
+
+            //Act
+            list.ToString();
+
+            //Assert
+            Assert.AreEqual(testString, list[3]);
+        }
+
+
         //  COPYING TEST
 
         //Test for copying Array into temp Array

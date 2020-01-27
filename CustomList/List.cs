@@ -43,13 +43,12 @@ namespace CustomList
             capacity = 4;
         }
 
-        public void EstablishList()
-        {
-          
-        }
-
         public void Add(T input)
         {
+            if(count == capacity)
+            {
+                CopyList();
+            }
             list[index] = input;
             index++;
         }
@@ -76,6 +75,17 @@ namespace CustomList
             }
         }
 
+        public override string ToString()
+        {
+            StringBuilder listToString = new StringBuilder();
+            for(int i = 0; i < count; i++)
+            {
+                listToString.Append(list[i].ToString());
+            }
+            return listToString.ToString();
+
+        }
+
         public T[] CopyList()
         {
             capacity *= 2;
@@ -84,20 +94,19 @@ namespace CustomList
 
             for (int i = 0; i < count - 1; i++)
             {
-                //temporary[i] = list[i];
+                temporary[i] = list[i];
             }
 
             return temporary;
         }
 
-        public void Extend(T list)
-        {
-            
-        }
-
         public IEnumerator GetEnumerator()
         {
-            throw new NotImplementedException();//for loop to print each index
+            for (int i = 0; i < list.Length; i++)
+            {
+                Console.WriteLine(list[i]);
+            }
+            throw new ArgumentOutOfRangeException();
         }
 
         //Make a method that temp holds the array that needs copied
