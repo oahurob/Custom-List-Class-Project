@@ -66,6 +66,8 @@ namespace CustomList
                 if (list[i].Equals(item))
                 {
                     list[i] = 0;
+                    Removed = true;
+                    count -= 1;
                 }
             }
             if (Removed)
