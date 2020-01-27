@@ -10,7 +10,8 @@ namespace CustomList
     {
         public T[] list = new T[4];
         public int index;
-        public int capacity; 
+        public int capacity;
+        public T input;
         public int Count { get { return count; } }
         private int count;
 
@@ -18,10 +19,18 @@ namespace CustomList
         {
             get
             {
+                if (index > count - 1 || index < 0)
+                {
+                    throw new ArgumentOutOfRangeException();
+                }
                 return list[index];
             }
             set
             {
+                if (index > count - 1 || index < 0)
+                {
+                    throw new ArgumentOutOfRangeException();
+                }
                 list[index] = value;
             }
         }
@@ -38,8 +47,14 @@ namespace CustomList
           
         }
 
-        public void Add<T>(T list)
+        public void Add<T>(T value)
         {
+            count++;
+            if(count < capacity)
+            {
+                list = Copy();
+            }
+            list[count - 1] = value;
             
         }
 
@@ -48,9 +63,9 @@ namespace CustomList
 
         }
 
-        public void Copy<T>(T list)
+        public void CopyList<T>(T list)
         {
-
+            
         }
 
         public void Extend<T>(T list)

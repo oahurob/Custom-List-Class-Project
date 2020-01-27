@@ -164,13 +164,13 @@ namespace CustomListTest
         {
             //Arrange
             List<int> list = new List<int>();
-            list.Copy;
+            list.CopyList;
 
             //Act
             list.list;
 
             //Assert
-            Assert.AreEqual(list.Copy, list.list);
+            Assert.AreEqual(list.CopyList, list.list);
 
         }
     }
