@@ -17,10 +17,15 @@ namespace CustomList
 
         public void ListAdd<T>()
         {
+            
+        }
+
+        public void ListRemove<T>()
+        {
 
         }
 
-        //Make a method that temperaroly holds the array that needs copied
+        //Make a method that temp holds the array that needs copied
 
     }
 }

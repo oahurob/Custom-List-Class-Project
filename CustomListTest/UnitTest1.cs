@@ -27,13 +27,31 @@ namespace CustomListTest
         [TestMethod]
         public void Test_AddValue_atIndex3()
         {
+            //Arrange
+            List<int> list = new List<int>();
+            int testNum = 4;
+
+            //Act
+            list.ListAdd(testNum);
+
+            //Assert
+            Assert.AreEqual(testNum, list[3]);
 
         }
 
-        //Test for Adding value to index 1 and then index 2
+        //Test for Adding value to index 0 and then index 1
         [TestMethod]
-        public void Test_AddValue_atIndex1_andIndex2()
+        public void Test_AddValue_atIndex0_andIndex1()
         {
+            //Arrange
+            List<int> list = new List<int>();
+            int testNum = 4;
+
+            //Act
+            list.ListAdd(testNum);
+
+            //Assert
+            Assert.AreEqual(testNum, list[0]);
 
         }
 
@@ -41,6 +59,15 @@ namespace CustomListTest
         [TestMethod]
         public void Test_AddValue_ToEachIndex()
         {
+            //Arrange
+            List<int> list = new List<int>();
+            int testNum = 4;
+
+            //Act
+            list.ListAdd(testNum);
+
+            //Assert
+            Assert.AreEqual(testNum, list[0]);
 
         }
 
@@ -48,13 +75,31 @@ namespace CustomListTest
         [TestMethod]
         public void Test_RemoveValue_atIndex0()
         {
+            //Arrange
+            List<int> list = new List<int>();
+            int testNum = 0;
+
+            //Act
+            list.ListRemove(testNum);
+
+            //Assert
+            Assert.AreEqual(testNum, list[0]);
 
         }
 
-        //Test for Removing value at index 4
+        //Test for Removing value at index 3
         [TestMethod]
         public void Test_RemoveValue_atIndex4()
         {
+            //Arrange
+            List<int> list = new List<int>();
+            int testNum = 0;
+
+            //Act
+            list.ListRemove(testNum);
+
+            //Assert
+            Assert.AreEqual(testNum, list[3]);
 
         }
 
@@ -62,6 +107,15 @@ namespace CustomListTest
         [TestMethod]
         public void Test_RemoveValue_atIndex0_withCapOf4()
         {
+            //Arrange
+            List<int> list = new List<int>();
+            int testNum = 0;
+
+            //Act
+            list.ListRemove(testNum);
+
+            //Assert
+            Assert.AreEqual(testNum, list[0]);
 
         }
 
