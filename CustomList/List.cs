@@ -114,6 +114,11 @@ namespace CustomList
             return tempList;
         }
 
+        public static List<T> operator -(List<T> one, List<T> two)
+        {
+
+        }
+
         public IEnumerator GetEnumerator()
         {
             for (int i = 0; i < list.Length; i++)

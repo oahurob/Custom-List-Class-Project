@@ -140,6 +140,76 @@ namespace CustomListTest
 
         }
 
+        // COPY TEST
+
+        //Test for capacity doubling from 4 to 8
+        [TestMethod]
+        public void Test_Capacity_4to8()
+        {
+            //Arrange
+            List<int> list = new List<int>();
+            int testNum = 8;
+            int[] arrayLength = list.CopyList();
+            int length = arrayLength.Length;
+
+            //Act
+            list.CopyList();
+
+            //Assert
+            Assert.AreEqual(testNum, length);
+        }
+
+        //Test checking length from 8 to 16
+        [TestMethod]
+        public void Test_Original8_equal_tempList16()
+        {
+            //Arrange
+            List<int> list = new List<int>();
+            int testNum = 16;
+            int[] arrayLength = list.CopyList();
+            int length = arrayLength.Length;
+
+            //Act
+            list.CopyList();
+
+            //Assert
+            Assert.AreEqual(testNum, length);
+        } 
+
+        //Test checking list 0 equals tempList 0
+        [TestMethod]
+        public void Test_list0_equal_tempList0()
+        {
+            //Arrange
+            List<int> list = new List<int>();
+            int original = list.list[0];
+            int[] arrayTemp = list.CopyList();
+            int tempList0 = arrayTemp[0];
+
+            //Act
+            list.CopyList();
+
+            //Assert
+            Assert.AreEqual(original, tempList0);
+        }
+
+        //Test checking original 3 equals tempList 3
+        [TestMethod]
+        public void Test_Original3_equals_tempList3()
+        {
+            //Arrange
+            List<int> list = new List<int>();
+            int original = list.list[3];
+            int[] arrayTemp = list.CopyList();
+            int tempList3 = arrayTemp[3];
+            
+            //Act
+            list.CopyList();
+
+            //Assert
+            Assert.AreEqual(original, tempList3);
+        }
+
         // TO STRING TEST  
 
         //Test for checking if index 0 was successfully changed to a string
@@ -173,38 +243,5 @@ namespace CustomListTest
         }
 
 
-        //  COPYING TEST
-
-        //Test for copying Array into temp Array
-        [TestMethod]
-        public void Test_Copying_Array()
-        {
-            //Arrange
-            List<int> list = new List<int>();
-            list.Copy;
-
-            //Act
-            list.list;
-
-            //Assert
-            Assert.AreEqual(list.Copy, list.list);
-
-        }
-
-        //Test to make sure index 0-3 of Original Array equal 0-3 of new Array
-        [TestMethod]
-        public void Test_OriginalArray_Equals_Index0Through3_OfNewArray()
-        {
-            //Arrange
-            List<int> list = new List<int>();
-            list.CopyList;
-
-            //Act
-            list.list;
-
-            //Assert
-            Assert.AreEqual(list.CopyList, list.list);
-
-        }
     }
 }
