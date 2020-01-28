@@ -244,6 +244,88 @@ namespace CustomListTest
 
         //OPERATOR + TEST
 
-        //Test for
+        //Test for checking combined list one 0 equals 1 or two 0
+        [TestMethod]
+        public void Test_Combined0_equals_1()
+        {
+            //Arrange
+            List<int> one = new List<int>();
+            List<int> two = new List<int>();
+            one.Add(1);
+            one.Add(2);
+            one.Add(3);
+            two.Add(1);
+            two.Add(2);
+            
+
+            //Act
+            one = one + two;
+
+            //Assert
+            Assert.AreEqual(1, one[3]);
+        }
+
+        //Test checking combined list 4 equals 8 
+        [TestMethod]
+        public void Test_Combined_equals_8()
+        {
+            //Arrange
+            List<int> one = new List<int>();
+            List<int> two = new List<int>();
+            one.Add(4);
+            one.Add(5);
+            one.Add(6);
+            two.Add(7);
+            two.Add(8);
+
+
+            //Act
+            one = one + two;
+
+            //Assert
+            Assert.AreEqual(8, one[4]);
+        }
+
+        //Test checking combined list 0 "blue" equals "blue"
+        [TestMethod]
+        public void Test_Combined0_equals_one0()
+        {
+            //Arrange
+            List<string> one = new List<string>();
+            List<string> two = new List<string>();
+            one.Add("blue");
+            one.Add("red");
+            one.Add("yellow");
+            two.Add("black");
+            two.Add("purple");
+
+
+            //Act
+            one = one + two;
+
+            //Assert
+            Assert.AreEqual("blue", one[0]);
+        }
+
+        //Test checking combined list 0 equals two1
+        [TestMethod]
+        public void Test_Combined4_equals_two1()
+        {
+            //Arrange
+            List<string> one = new List<string>();
+            List<string> two = new List<string>();
+            one.Add("blue");
+            one.Add("red");
+            one.Add("yellow");
+            two.Add("black");
+            two.Add("purple");
+
+
+            //Act
+            one = one + two;
+
+            //Assert
+            Assert.AreEqual("purple", one[4]);
+        }
     }
 }

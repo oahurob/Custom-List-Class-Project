@@ -12,7 +12,7 @@ namespace CustomList
         public T[] list = new T[4];
         public int index;
         public int capacity;
-        public T input;
+        //public T input;
         public int Count { get { return count; } }
         private int count;
 
@@ -103,20 +103,24 @@ namespace CustomList
         public static List<T> operator +(List<T> one, List<T> two)
         {
             List<T> tempList = new List<T>();
-            foreach(T index in one)
+            foreach(T item in one)
             {
-                tempList.Add(index);
+                tempList.Add(item);
             }
-            foreach(T index in two)
+            foreach(T item in two)
             {
-                tempList.Add(index);
+                tempList.Add(item);
             }
             return tempList;
         }
 
         public static List<T> operator -(List<T> one, List<T> two)
         {
-
+            List<T> tempList = one;
+            foreach(T item in two)
+            {
+               //
+            }
             return tempList;
         }
 
