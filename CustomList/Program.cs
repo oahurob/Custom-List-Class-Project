@@ -10,7 +10,7 @@ namespace CustomList
     {
         static void Main(string[] args)
         {
-            List<T> list = new List<T>();
+            
         }
     }
 }

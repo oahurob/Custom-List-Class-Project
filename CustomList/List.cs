@@ -116,6 +116,10 @@ namespace CustomList
 
         public static List<T> operator -(List<T> one, List<T> two)
         {
+            // 1223
+            // 482
+            // 123
+            // 13
             List<T> tempList = one;
             foreach(T item in two)
             {

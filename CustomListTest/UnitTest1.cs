@@ -28,17 +28,22 @@ namespace CustomListTest
 
         //Test for Adding value to index 3
         [TestMethod]
+        
+        // index out of bounds
         public void Test_AddValue_atIndex3()
         {
             //Arrange
             List<int> list = new List<int>();
-            int testNum = 4;
+    
 
             //Act
-            list.Add(testNum);
+            list.Add(5);
+            list.Add(3);
+            list.Add(7);
+            list.Add(1);
 
             //Assert
-            Assert.AreEqual(testNum, list[3]);
+            Assert.AreEqual(1, list[3]);
 
         }
 
@@ -51,10 +56,16 @@ namespace CustomListTest
             int testNum = 4;
 
             //Act
-            list.Add(testNum);
+            list.Add(4);
+            list.Add(8);
+            list.Add(4);
+            list.Add(3);
+            list.Add(5);
+            list.Add(2);
+            list.Add(7);
 
             //Assert
-            Assert.AreEqual(testNum, list[0]);
+            Assert.AreEqual(2, list[5]);
 
         }
 
@@ -67,10 +78,15 @@ namespace CustomListTest
             int testNum = 4;
 
             //Act
-            list.Add(testNum);
+            list.Add(2);
+            list.Add(5);
+            list.Add(1);
+            list.Add(6);
+            list.Add(3);
+            list.Add(3);
 
             //Assert
-            Assert.AreEqual(testNum, list[0]);
+            Assert.AreEqual(6, list.Count);
 
         }
 
@@ -82,13 +98,15 @@ namespace CustomListTest
         {
             //Arrange
             List<int> list = new List<int>();
-            int testNum = 0;
 
             //Act
-            list.Remove(testNum);
+            list.Add(2);
+            list.Add(3);
+            list.Add(7);
+            list.Remove(3);
 
             //Assert
-            Assert.AreEqual(testNum, list[0]);
+            Assert.AreEqual(7, list[1]);
 
         }
 
@@ -98,13 +116,16 @@ namespace CustomListTest
         {
             //Arrange
             List<int> list = new List<int>();
-            int testNum = 0;
-
             //Act
-            list.Remove(testNum);
+            list.Add(2);
+            list.Add(7);
+            list.Add(3);
+            list.Add(7);
+            list.Add(4);
+            list.Remove(7);
 
             //Assert
-            Assert.AreEqual(testNum, list[3]);
+            Assert.AreEqual(7, list[2]);
 
         }
 
@@ -114,13 +135,13 @@ namespace CustomListTest
         {
             //Arrange
             List<int> list = new List<int>();
-            int testNum = 0;
 
             //Act
-            list.Remove(testNum);
+            list.Add(12);
+            list.Remove(12);
 
             //Assert
-            Assert.AreEqual(testNum, list[0]);
+            Assert.AreEqual(0, list.Count);
 
         }
 
@@ -130,13 +151,13 @@ namespace CustomListTest
         {
             //Arrange
             List<int> list = new List<int>();
-            int testNum = 0;
 
             //Act
-            list.Remove(testNum);
+            list.Add(34);
+            list.Remove(20);
 
             //Assert
-            Assert.AreEqual(testNum, list[3]);
+            Assert.AreEqual(34, list[0]);
 
         }
 
