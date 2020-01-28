@@ -16,13 +16,12 @@ namespace CustomListTest
         {
             //Arrange
             List<int> list = new List<int>();
-            int testNum = 4;
 
             //Act
-            list.Add(testNum);
+            list.Add(4);
 
             //Assert
-            Assert.AreEqual(testNum, list[0]);
+            Assert.AreEqual(4, list[0]);
 
         }
 

@@ -20,7 +20,7 @@ namespace CustomList
         {
             get
             {
-                if (index > count - 1 || index < 0)
+                if (index < 0)//index > count - 1 || 
                 {
                     throw new ArgumentOutOfRangeException();
                 }
@@ -28,7 +28,7 @@ namespace CustomList
             }
             set
             {
-                if (index > count - 1 || index < 0)
+                if (index < 0)
                 {
                     throw new ArgumentOutOfRangeException();
                 }
