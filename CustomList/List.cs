@@ -51,6 +51,7 @@ namespace CustomList
             }
             list[index] = item;
             index++;
+            count++;
         }
 
         public bool Remove(T item)
@@ -96,8 +97,8 @@ namespace CustomList
             {
                 tempList[i] = list[i];
             }
-
-            return tempList;
+            list = tempList;
+            return list;
         }
 
         public static List<T> operator +(List<T> one, List<T> two)

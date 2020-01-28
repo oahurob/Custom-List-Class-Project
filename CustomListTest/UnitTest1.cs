@@ -12,7 +12,7 @@ namespace CustomListTest
 
         //Test for adding value to index 0
         [TestMethod]
-        public void Test_Add_To_Index0()
+        public void Test_AddTo_Index0()
         {
             //Arrange
             List<int> list = new List<int>();
@@ -46,13 +46,12 @@ namespace CustomListTest
 
         }
 
-        //Test for Adding value to index 0 and then index 1
+        //Test for Adding value pass capacity to extend array
         [TestMethod]
-        public void Test_AddValue_atIndex0_andIndex1()
+        public void Test_AddValue_ToExtendArray()
         {
             //Arrange
             List<int> list = new List<int>();
-            int testNum = 4;
 
             //Act
             list.Add(4);
@@ -74,7 +73,6 @@ namespace CustomListTest
         {
             //Arrange
             List<int> list = new List<int>();
-            int testNum = 4;
 
             //Act
             list.Add(2);
@@ -169,11 +167,10 @@ namespace CustomListTest
             //Arrange
             List<int> list = new List<int>();
             int testNum = 8;
-            int[] arrayLength = list.CopyList();
-            int length = arrayLength.Length;
 
             //Act
-            list.CopyList();
+            int[] arrayLength = list.CopyList();
+            int length = arrayLength.Length;
 
             //Assert
             Assert.AreEqual(testNum, length);
