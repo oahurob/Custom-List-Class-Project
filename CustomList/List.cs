@@ -104,12 +104,9 @@ namespace CustomList
         {
             for (int i = 0; i < list.Length; i++)
             {
-                Console.WriteLine(list[i]);
+                yield return list[i];
             }
-            throw new ArgumentOutOfRangeException();
         }
-
-        //Make a method that temp holds the array that needs copied
 
 
     }
