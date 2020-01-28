@@ -183,14 +183,20 @@ namespace CustomListTest
             //Arrange
             List<int> list = new List<int>();
             int testNum = 16;
-            int[] arrayLength = list.CopyList();
-            int length = arrayLength.Length;
 
             //Act
-            list.CopyList();
+            list.Add(2);
+            list.Add(7);
+            list.Add(3);
+            list.Add(7);
+            list.Add(4);
+            list.Add(2);
+            list.Add(7);
+            list.Add(3);
+            list.Add(7);
 
             //Assert
-            Assert.AreEqual(testNum, length);
+            Assert.AreEqual(testNum, list.capacity);
         } 
 
         //Test checking list 0 equals tempList 0
@@ -279,7 +285,7 @@ namespace CustomListTest
             one = one + two;
 
             //Assert
-            Assert.AreEqual(1, one[3]);
+            Assert.AreEqual(2, one[4]);
         }
 
         //Test checking combined list 4 equals 8 

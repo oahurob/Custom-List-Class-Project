@@ -103,34 +103,57 @@ namespace CustomList
         public static List<T> operator +(List<T> one, List<T> two)
         {
             List<T> tempList = new List<T>();
-            foreach(T item in one)
+            for(int i = 0; i < one.Count; i++)
             {
-                tempList.Add(item);
+                tempList.Add(one[i]);
             }
-            foreach(T item in two)
+            for(int i = 0; i < two.Count; i++)
             {
-                tempList.Add(item);
+                tempList.Add(two[i]);
             }
             return tempList;
         }
 
         public static List<T> operator -(List<T> one, List<T> two)
         {
-            // 1223
-            // 482
-            // 123
-            // 13
+            // 1223 // 482 // 123// 13
             List<T> tempList = one;
-            foreach(T item in two)
+            for(int i = 0; i < two.Count; i++)
             {
-                tempList.Remove(item);
+                if(one[i].Equals(two[i]))
+                {
+                    tempList.Remove(one[i]);
+                    tempList.Remove(two[i]);
+                }
             }
+            //foreach(T item in two)
+            //{
+            //    tempList.Remove(item);
+            //}
             return tempList;
         }
 
-        public void Zip(List<T> list)
+        public static List<T> Zip(List<T> one, List<T> two)
         {
-            
+            List<T> temp = new List<T>();
+            int count = 0;
+            int counter = 0;
+
+            while(count < two.Count + one.Count)
+            {
+                if (counter < one.Count)
+                {
+                    temp.Add(one.list[counter]);
+                    count++;
+                }
+                if(counter < two.Count)
+                {
+                    temp.Add(two.list[counter]);
+                    count++;
+                }
+                counter++;
+            }
+            return temp;
         }
 
         public IEnumerator GetEnumerator()
