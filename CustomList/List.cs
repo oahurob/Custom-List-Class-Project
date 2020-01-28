@@ -119,7 +119,7 @@ namespace CustomList
             List<T> tempList = one;
             foreach(T item in two)
             {
-               //
+                tempList.Remove(item);
             }
             return tempList;
         }

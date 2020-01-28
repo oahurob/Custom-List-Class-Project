@@ -327,5 +327,29 @@ namespace CustomListTest
             //Assert
             Assert.AreEqual("purple", one[4]);
         }
+
+        //OPERATOR - TEST
+
+        //Test checking if list one - list two
+        [TestMethod]
+        public void Test_listOne_minus_listTwo()
+        {
+            //Arrange
+            List<int> one = new List<int>();
+            List<int> two = new List<int>();
+            one.Add(1);//-
+            one.Add(2);//-
+            one.Add(3);
+            two.Add(1);//-
+            two.Add(2);//-
+            two.Add(8);
+
+
+            //Act
+            one = one - two;
+
+            //Assert
+            Assert.AreEqual(3, one[0]);
+        }
     }
 }
