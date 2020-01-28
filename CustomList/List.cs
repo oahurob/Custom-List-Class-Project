@@ -43,23 +43,23 @@ namespace CustomList
             capacity = 4;
         }
 
-        public void Add(T input)
+        public void Add(T item)
         {
             if(count == capacity)
             {
                 CopyList();
             }
-            list[index] = input;
+            list[index] = item;
             index++;
         }
 
-        public bool Remove(T itnput)
+        public bool Remove(T item)
         {
             bool Removed = false;
 
             for (int i = 0; i < count; i++)
             {
-                if (list[i].Equals(input))
+                if (list[i].Equals(item))
                 {
                     Removed = true;
                 }
@@ -117,6 +117,7 @@ namespace CustomList
         public static List<T> operator -(List<T> one, List<T> two)
         {
 
+            return tempList;
         }
 
         public IEnumerator GetEnumerator()

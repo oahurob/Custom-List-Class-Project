@@ -242,6 +242,8 @@ namespace CustomListTest
             Assert.AreEqual(testString, list[3]);
         }
 
+        //OPERATOR + TEST
 
+        //Test for
     }
 }
