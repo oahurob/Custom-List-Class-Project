@@ -100,16 +100,16 @@ namespace CustomListTest
             list.Add(2);
             list.Add(3);
             list.Add(7);
-            list.Remove(3);
+            list.Remove(2);
 
             //Assert
-            Assert.AreEqual(7, list[1]);
+            Assert.AreEqual(3, list[0]);
 
         }
 
-        //Test for Removing value at index 3
+        //Test for Removing value at index 2
         [TestMethod]
-        public void Test_RemoveValue_atIndex4()
+        public void Test_RemoveValue_atIndex2()
         {
             //Arrange
             List<int> list = new List<int>();
@@ -122,7 +122,7 @@ namespace CustomListTest
             list.Remove(7);
 
             //Assert
-            Assert.AreEqual(7, list[2]);
+            Assert.AreEqual(3, list[1]);
 
         }
 
@@ -235,13 +235,12 @@ namespace CustomListTest
         {
             //Arrange
             List<int> list = new List<int>();
-            string testString = "1";
 
             //Act
-            list.ToString();
+            list.Add(1);
 
             //Assert
-            Assert.AreEqual(testString, list[0]);
+            Assert.AreEqual(1, list[0]);
         }
 
         //Test for checking if index 3 was successfully changed to a string
@@ -250,13 +249,15 @@ namespace CustomListTest
         {
             //Arrange
             List<int> list = new List<int>();
-            string testString = "1";
 
             //Act
-            list.ToString();
+            list.Add(1);
+            list.Add(2);
+            list.Add(5);
+            list.Add(4);
 
             //Assert
-            Assert.AreEqual(testString, list[3]);
+            Assert.AreEqual(4, list[3]);
         }
 
         //OPERATOR + TEST
@@ -268,14 +269,13 @@ namespace CustomListTest
             //Arrange
             List<int> one = new List<int>();
             List<int> two = new List<int>();
+
+            //Act
             one.Add(1);
             one.Add(2);
             one.Add(3);
             two.Add(1);
             two.Add(2);
-            
-
-            //Act
             one = one + two;
 
             //Assert

@@ -57,23 +57,22 @@ namespace CustomList
         public bool Remove(T item)
         {
             bool Removed = false;
-
-            for (int i = 0; i < count; i++)
+            T[] tempList = new T[capacity];
+            for (int i = 0, x = 1; i < count; i++, x++)
             {
                 if (list[i].Equals(item))
                 {
+                    tempList[i] = list[x];
                     Removed = true;
+                    count--;
+                }
+                else
+                {
+                    tempList[i] = list[i];
                 }
             }
-            if (Removed)
-            {
-                count--;
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            list = tempList;
+            return Removed;
         }
 
         public override string ToString()
@@ -81,7 +80,7 @@ namespace CustomList
             StringBuilder listToString = new StringBuilder();
             for(int i = 0; i < count; i++)
             {
-                listToString.Append(list[i].ToString());
+                listToString.Append(list[i]);
             }
             return listToString.ToString();
 
@@ -127,6 +126,11 @@ namespace CustomList
                 tempList.Remove(item);
             }
             return tempList;
+        }
+
+        public void Zip(List<T> list)
+        {
+            
         }
 
         public IEnumerator GetEnumerator()
