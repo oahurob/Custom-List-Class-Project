@@ -90,14 +90,28 @@ namespace CustomList
         {
             capacity *= 2;
 
-            T[] temporary = new T[capacity];
+            T[] tempList = new T[capacity];
 
             for (int i = 0; i < count - 1; i++)
             {
-                temporary[i] = list[i];
+                tempList[i] = list[i];
             }
 
-            return temporary;
+            return tempList;
+        }
+
+        public static List<T> operator +(List<T> one, List<T> two)
+        {
+            List<T> tempList = new List<T>();
+            foreach(T index in one)
+            {
+                tempList.Add(index);
+            }
+            foreach(T index in two)
+            {
+                tempList.Add(index);
+            }
+            return tempList;
         }
 
         public IEnumerator GetEnumerator()
@@ -107,6 +121,8 @@ namespace CustomList
                 yield return list[i];
             }
         }
+
+        
 
 
     }
