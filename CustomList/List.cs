@@ -118,18 +118,10 @@ namespace CustomList
         {
             // 1223 // 482 // 123// 13
             List<T> tempList = one;
-            for(int i = 0; i < two.Count; i++)
+            foreach(T item in tempList)
             {
-                if(one[i].Equals(two[i]))
-                {
-                    tempList.Remove(one[i]);
-                    tempList.Remove(two[i]);
-                }
+                tempList.Remove(item);
             }
-            //foreach(T item in two)
-            //{
-            //    tempList.Remove(item);
-            //}
             return tempList;
         }
 

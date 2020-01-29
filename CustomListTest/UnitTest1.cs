@@ -107,9 +107,9 @@ namespace CustomListTest
 
         }
 
-        //Test for Removing value at index 2
+        //Test for Removing value at index 1
         [TestMethod]
-        public void Test_RemoveValue_atIndex2()
+        public void Test_RemoveValue_atIndex1()
         {
             //Arrange
             List<int> list = new List<int>();
@@ -370,6 +370,30 @@ namespace CustomListTest
 
             //Act
             one = one - two;
+
+            //Assert
+            Assert.AreEqual(3, one[0]);
+        }
+
+        //ZIP TEST
+
+        //Test checking zip list at last index
+        [TestMethod]
+        public void Test_Zip_LastIndex()
+        {
+            //Arrange
+            List<int> one = new List<int>();
+            List<int> two = new List<int>();
+            one.Add(1);
+            one.Add(2);
+            one.Add(3);
+            two.Add(1);
+            two.Add(2);
+            two.Add(8);
+
+
+            //Act
+            List<T>.Zip(one, two);
 
             //Assert
             Assert.AreEqual(3, one[0]);
