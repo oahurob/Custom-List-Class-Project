@@ -1,0 +1,26 @@
+
+//operator -, takes two seperate list and removes from a combined list of the two any value of which appears in both list.
+
+
+public static List<T> operator -(List<T> one, List<T> two)
+        {
+            List<T> tempList = one;
+
+            //one.Add(1);
+            //one.Add(2);
+            //one.Add(3);
+            //two.Add(1);
+            //two.Add(2);
+            //two.Add(8);
+
+            foreach(T item in tempList)
+            {
+                //This will remove any value that appears in both list.
+                tempList.Remove(item);
+            }
+            //The return list: tempList should appeare as, 3,8
+            return tempList;
+        }
+
+//
+
