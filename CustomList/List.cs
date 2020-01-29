@@ -12,7 +12,6 @@ namespace CustomList
         public T[] list = new T[4];
         public int index;
         public int capacity;
-        //public T input;
         public int Count { get { return count; } }
         private int count;
 
@@ -20,7 +19,7 @@ namespace CustomList
         {
             get
             {
-                if (index < 0)//index > count - 1 || 
+                if (index < 0) 
                 {
                     throw new ArgumentOutOfRangeException();
                 }
@@ -116,7 +115,6 @@ namespace CustomList
 
         public static List<T> operator -(List<T> one, List<T> two)
         {
-            // 1223 // 482 // 123// 13
             List<T> tempList = one;
             foreach(T item in tempList)
             {
